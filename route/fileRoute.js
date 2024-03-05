@@ -1,11 +1,8 @@
-const { request } = require('express')
-
 const fileRoute = require('express').Router()
 
-const { uploadFile , readAllFiles , readSingleFile , deleteFile} =require('../controller/filectrl')
+const { uploadFile, readAllFiles, readSingleFile, deleteFile } = require('../controller/fileCtrl')
 
-//path
-
+// path
 fileRoute.post(`/upload`, uploadFile)
 
 fileRoute.get(`/all`, readAllFiles)
